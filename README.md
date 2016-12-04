@@ -15,3 +15,7 @@ For now, only basic functionalities
 - bright adjust
 
 :coffee:
+
+Tools used:
+
+http://www.nirsoft.net/utils/nircmd.html
