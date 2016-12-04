@@ -1,0 +1,41 @@
+
+.customBody{
+	text-align: center;
+	background-color: black;
+	color: black;
+}
+
+.myButton{
+	margin-top: 20px;
+	width: 483;
+	height: 357;
+	display: block;
+	font-size: 100;
+	background-color: #000;
+	color: red;
+	border: solid 5px red;
+	margin-left: auto;
+	margin-right: auto;
+}
+.myButton:hover{
+	background-color: red;
+	color: #FFF;
+	cursor: pointer;
+	border-color: #FFF;
+}
+
+.fullScreenPlayer{
+	width: 100%;
+	height: 100%;
+}
+
+.smallPlayer{
+	display: inline;
+	border: solid 5px red;
+	margin-top: 20px;
+}
+
+.smallPlayer:hover{
+	display: inline;
+	border-color: #FFF;
+}

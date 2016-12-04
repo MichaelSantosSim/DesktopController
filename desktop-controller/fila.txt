@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+ 
+typedef struct fila {
+	int elementos[30];
+	int n;
+}fila;
+ 
+ 
+int quantidade (fila * f){
+	return f->n;
+}
+
+void inicializa_fila (fila * f){
+	f->n = 0; 
+}
+ 
+int esta_cheia (fila * f){
+	return f->n >= 30;
+	
+}
+ 
+void enfileirar (fila * f, int e){
+	if (!esta_cheia(f)){
+		f->elementos[(f->n)++] = e;
+		int r = rand() % 3;
+    	}
+	else{
+		printf("Fila cheia!");
+	}
+}
+ 
+int desenfileirar (fila * f){//se não estiver vazia
+	int aux = f->elementos[0];
+	int i;
+	for (i = 1; i < f->n; i++)
+		f->elementos[i - 1] = f->elementos[i];
+	f->n = f->n - 1;
+	return aux;
+}
+ 
+int esta_vazia (fila * f){
+	return f->n <= 0;
+}
+ 
+void mostrar_fila (fila * f){
+	int i;
+	printf ("\nitens na fila: %d\n", f->n);
+	for (i = 0; i < f->n; i++){
+		printf ("%d  ", f->elementos[i]);
+	}
+}
+
+void primeiro_teste(){
+fila f;
+    inicializa_fila(&f);
+    enfileirar(&f, 1);
+    enfileirar(&f, 2);
+    enfileirar(&f, 3);
+    enfileirar(&f, 4);
+    mostrar_fila(&f);
+    printf ("\n");
+    desenfileirar(&f);
+    mostrar_fila(&f);
+    printf ("\n");
+    desenfileirar(&f);
+    mostrar_fila(&f);
+    printf ("\n");
+    desenfileirar(&f);
+    mostrar_fila(&f);
+    printf ("\n");
+    desenfileirar(&f);
+    mostrar_fila(&f);
+    printf ("\n");
+
+/*
+	enfileirar(&f, 15);
+	mostrar_fila(&f);
+	printf ("\n");
+*/ 
+
+}
+
+int main(){
+	srand(time(NULL));
+	primeiro_teste();
+	return 0;
+}
+
+
+
